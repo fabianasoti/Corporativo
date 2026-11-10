@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fabiana Sotillo · Manual de Identidad</title>
+	<meta name="description" content="Manual de identidad corporativa de Fabiana Sotillo y sistema de diseño de interfaz: color, tipografía y componentes.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/svg+xml" href="assets/logo/fs-favicon.svg">
+	<link rel="stylesheet" href="css/tokens.css">
+	<link rel="stylesheet" href="css/manual.css">
+</head>
+<body>
+
+<header class="topbar">
+	<strong style="font-family:var(--font-display);font-style:italic;font-weight:400;font-size:1.4rem">Fabiana Sotillo</strong>
+	<button id="menu-btn" aria-label="Abrir menú">☰</button>
+</header>
+
+<aside class="sidebar" id="sidebar">
+	<div class="brand">
+		<img class="brand-logo" src="assets/logo/fs-app-icon.svg" alt="Monograma FS" width="48" height="48">
+		<div><strong>Fabiana Sotillo</strong><small>Manual de identidad</small></div>
+	</div>
+	<nav class="nav">
+		<a href="#inicio">Inicio</a>
+		<a href="#logotipo">Logotipo</a>
+		<a href="#color">Color y roles</a>
+		<a href="#reglas">Reglas de uso</a>
+		<a href="#accesibilidad">Contraste</a>
+		<a href="#tipografia">Tipografía</a>
+		<a href="#componentes">Componentes</a>
+		<a href="#formularios">Formularios</a>
+		<a href="#pantalla">Pantalla de ejemplo</a>
+		<a href="#tokens">Tokens CSS</a>
+	</nav>
+	<div class="sidebar-foot">
+		<div class="palette-dots">
+			<i style="background:#F9F8F4"></i><i style="background:#D5DCDF"></i><i style="background:#86915D"></i><i style="background:#C4A524"></i><i style="background:#DCA3B9"></i><i style="background:#D2437A"></i><i style="background:#C45524"></i>
+		</div>
+		Cercano, claro y profesional · v0.2
+	</div>
+</aside>
+
+<main>
+
+<!-- ============ INICIO ============ -->
+<section id="inicio" class="hero">
+	<span class="eyebrow">Fabiana Sotillo · Sistema de diseño de interfaz</span>
+	<h1>Interfaces que se entienden a la primera.</h1>
+	<p class="lead">Una base profunda y serena (azul bosque y neutros cálidos) con acentos vivos que guían la acción. Así se ven y se sienten todas las aplicaciones de Fabiana Sotillo: profesionales, amigables y fáciles de aprender.</p>
+	<div class="grid c3">
+		<div class="card hoverable"><div class="icon-box" style="background:color-mix(in srgb,var(--cta) 12%,#fff);color:var(--cta-hover)">01</div><h3>Intuitiva</h3><p class="hint" style="font-size:var(--fs-sm);color:var(--text-muted)">Un solo botón rosa de acción por pantalla. El usuario siempre sabe qué hacer después.</p></div>
+		<div class="card hoverable"><div class="icon-box" style="background:color-mix(in srgb,var(--nature) 25%,#fff);color:var(--willow-text)">02</div><h3>Amigable</h3><p style="font-size:var(--fs-sm);color:var(--text-muted)">Tonos naturales, esquinas redondeadas y mensajes en tono cercano.</p></div>
+		<div class="card hoverable"><div class="icon-box" style="background:color-mix(in srgb,var(--delight) 14%,#fff);color:var(--delight-text)">03</div><h3>Dinámica</h3><p style="font-size:var(--fs-sm);color:var(--text-muted)">Micro-interacciones suaves y acentos con personalidad en los momentos clave.</p></div>
+	</div>
+</section>
+
+<!-- ============ LOGOTIPO ============ -->
+<section id="logotipo">
+	<div class="section-head">
+		<h2>Logotipo</h2>
+		<p>Monograma FS con órbita y chispa, más el nombre en caligrafía. Todos los archivos son SVG vectoriales en <code>assets/logo/</code>.</p>
+	</div>
+
+	<div class="logo-stage">
+		<img src="assets/logo/fs-logo-horizontal.svg" alt="Logotipo horizontal de Fabiana Sotillo" style="width:min(100%,34rem)">
+		<p class="tagline">Desarrollo · Diseño · Soluciones</p>
+	</div>
+
+	<div class="grid c2">
+		<div class="card" style="display:grid;gap:var(--space-3)">
+			<h3>Anatomía</h3>
+			<ul class="plain">
+				<li><b style="color:var(--blackthorn-berry)">F</b> en Blackthorn Berry <code>#224653</code>: estructura y solidez.</li>
+				<li><b style="color:var(--willow-leaf)">S</b> en Willow Leaf <code>#86915D</code>: cercanía y naturalidad.</li>
+				<li><b style="color:var(--wild-honeysuckle)">Órbita</b> en degradado <code>#C47A87 → #ED9F77</code>: movimiento y calidez.</li>
+				<li><b style="color:var(--gorse-bloom)">Chispa</b> en <code>#E4B94F</code>: la idea, el detalle que brilla.</li>
+				<li>Nombre en caligrafía vectorial Blackthorn, con filete vertical Willow.</li>
+			</ul>
+		</div>
+		<div class="card" style="display:grid;gap:var(--space-3)">
+			<h3>Área de protección y tamaño mínimo</h3>
+			<div class="clear-demo"><img src="assets/logo/fs-logo-horizontal.svg" alt="" style="width:15rem"></div>
+			<ul class="plain">
+				<li><b>x</b> = ancho de la F. Deja al menos <b>x</b> libre alrededor del logotipo.</li>
+				<li>Mínimo horizontal: <b>160 px</b> en pantalla · <b>40 mm</b> en impresión.</li>
+				<li>Monograma: <b>24 px</b>. Por debajo, usa el favicon simplificado.</li>
+				<li>El eslogan solo se muestra a partir de 280 px de ancho.</li>
+			</ul>
+		</div>
+	</div>
+
+	<h3 class="group-title" style="--dot:var(--nature)">Versiones</h3>
+	<div class="grid c3">
+		<div class="card logo-card"><div class="logo-bg" style="background:var(--bg)"><img src="assets/logo/fs-logo-horizontal.svg" alt=""></div><h4>Color · horizontal</h4><p>Versión principal. Sobre fondos claros (Hawthorn, blanco, Silver Birch).</p><a href="assets/logo/fs-logo-horizontal.svg" download>Descargar SVG</a></div>
+		<div class="card logo-card"><div class="logo-bg" style="background:var(--surface-alt)"><img src="assets/logo/fs-logo-horizontal-mono.svg" alt=""></div><h4>Monocromo Blackthorn</h4><p>Impresión a una tinta, sellos, documentos y fondos de color claro.</p><a href="assets/logo/fs-logo-horizontal-mono.svg" download>Descargar SVG</a></div>
+		<div class="card logo-card"><div class="logo-bg" style="background:var(--structure)"><img src="assets/logo/fs-logo-horizontal-blanco.svg" alt=""></div><h4>Negativo (blanco)</h4><p>Sobre Blackthorn, fotografías oscuras o cabeceras de color.</p><a href="assets/logo/fs-logo-horizontal-blanco.svg" download>Descargar SVG</a></div>
+		<div class="card logo-card"><div class="logo-bg" style="background:var(--bg)"><img src="assets/logo/fs-monograma.svg" alt="" style="height:6rem"></div><h4>Monograma</h4><p>Cuando el nombre ya aparece cerca: perfiles, firmas, pie de página.</p><a href="assets/logo/fs-monograma.svg" download>Descargar SVG</a></div>
+		<div class="card logo-card"><div class="logo-bg" style="background:var(--bg)"><img src="assets/logo/fs-app-icon.svg" alt="" style="height:6rem"></div><h4>Icono de app</h4><p>Cuadrado redondeado blanco. Para launchers, redes y tarjetas de proyecto.</p><a href="assets/logo/fs-app-icon.svg" download>Descargar SVG</a></div>
+		<div class="card logo-card"><div class="logo-bg" style="background:var(--bg)"><img src="assets/logo/fs-favicon.svg" alt="" style="height:6rem"></div><h4>Favicon</h4><p>Simplificado, sin órbita, para 16 – 48 px. Se usa como icono de pestaña.</p><a href="assets/logo/fs-favicon.svg" download>Descargar SVG</a></div>
+	</div>
+
+	<h3 class="group-title" style="--dot:var(--danger)">Usos incorrectos</h3>
+	<div class="grid c4">
+		<div class="card wrong"><div class="logo-bg" style="background:var(--bg)"><img src="assets/logo/fs-logo-horizontal.svg" alt="" style="transform:scaleX(1.5)"></div><p>✕ Deformarlo o estirarlo.</p></div>
+		<div class="card wrong"><div class="logo-bg" style="background:var(--bg)"><img src="assets/logo/fs-logo-horizontal.svg" alt="" style="transform:rotate(-12deg)"></div><p>✕ Girarlo o inclinarlo.</p></div>
+		<div class="card wrong"><div class="logo-bg" style="background:var(--bg)"><img src="assets/logo/fs-logo-horizontal.svg" alt="" style="filter:hue-rotate(110deg) saturate(1.8)"></div><p>✕ Cambiar los colores.</p></div>
+		<div class="card wrong"><div class="logo-bg" style="background:var(--willow-leaf)"><img src="assets/logo/fs-logo-horizontal.svg" alt=""></div><p>✕ Ponerlo sobre un fondo sin contraste.</p></div>
+		<div class="card wrong"><div class="logo-bg" style="background:var(--bg)"><img src="assets/logo/fs-logo-horizontal.svg" alt="" style="filter:drop-shadow(4px 6px 3px rgb(0 0 0 / .5))"></div><p>✕ Añadir sombras o efectos.</p></div>
+		<div class="card wrong"><div class="logo-bg" style="background:var(--bg)"><img src="assets/logo/fs-logo-horizontal.svg" alt="" style="width:5rem"></div><p>✕ Usarlo por debajo del tamaño mínimo.</p></div>
+		<div class="card wrong"><div class="logo-bg" style="background:var(--bg)"><img src="assets/logo/fs-monograma.svg" alt="" style="height:4rem"><span class="display" style="font-size:2rem;margin-left:8px;font-family:Georgia,serif;font-style:normal">Fabiana Sotillo</span></div><p>✕ Rehacer el nombre con otra tipografía.</p></div>
+		<div class="card wrong"><div class="logo-bg" style="background:linear-gradient(135deg,var(--foxglove-bell),var(--copper-beech))"><img src="assets/logo/fs-logo-horizontal.svg" alt=""></div><p>✕ Sobre fondos saturados o degradados.</p></div>
+	</div>
+</section>
+
+<!-- ============ COLOR ============ -->
+<section id="color">
+	<div class="section-head">
+		<h2>1. Color y roles de interfaz</h2>
+		<p>Pulsa cualquier color para copiar su variable. En el código usa siempre el token semántico, no el HEX.</p>
+	</div>
+
+	<h3 class="group-title" style="--dot:var(--structure)">Estructura · colores base (columna izquierda)</h3>
+	<div class="grid c4">
+		<button class="card swatch hoverable" data-copy="var(--bg)  /* #F9F8F4 */">
+			<div class="chip" style="background:#F9F8F4"></div>
+			<span class="name">Hawthorn Blossom</span><span class="hex">#F9F8F4 · --bg</span>
+			<span class="role">Fondo general de la app y de los campos de formulario. Blanco cálido, descansa la vista.</span>
+			<span class="tag">Fondo</span>
+		</button>
+		<button class="card swatch hoverable" data-copy="var(--surface-alt)  /* #D5DCDF */">
+			<div class="chip" style="background:#D5DCDF"></div>
+			<span class="name">Silver Birch</span><span class="hex">#D5DCDF · --border</span>
+			<span class="role">Bordes, divisores, barras de progreso vacías, hover de filas y botones fantasma.</span>
+			<span class="tag">Neutro</span>
+		</button>
+		<button class="card swatch hoverable" data-copy="var(--text)  /* #224653 */">
+			<div class="chip" style="background:#224653"></div>
+			<span class="name">Blackthorn Berry</span><span class="hex">#224653 · --text / --structure</span>
+			<span class="role">Texto principal, sidebar, cabeceras de tabla y botón estructural. Es el «negro» de la marca.</span>
+			<span class="tag">Texto y estructura</span>
+		</button>
+		<button class="card swatch hoverable" data-copy="var(--nature)  /* #86915D */">
+			<div class="chip" style="background:#86915D"></div>
+			<span class="name">Willow Leaf</span><span class="hex">#86915D · --nature</span>
+			<span class="role">Detalles naturales: hover de bordes, iconos decorativos, badges neutros. Nunca para texto.</span>
+			<span class="tag">Acento suave</span>
+		</button>
+	</div>
+
+	<h3 class="group-title" style="--dot:var(--cta)">Acciones y estados · acentos (columna derecha)</h3>
+	<div class="grid c4">
+		<button class="card swatch hoverable" data-copy="var(--cta)  /* #C73871 (Foxglove Bell, versión de relleno) */">
+			<div class="chip" style="background:#D2437A"></div>
+			<span class="name">Foxglove Bell</span><span class="hex">#D2437A · relleno #C73871 · --cta</span>
+			<span class="role">Acción principal. <b>Un solo botón por pantalla.</b> También foco de inputs, checkboxes y enlaces de marca.</span>
+			<span class="tag">CTA</span>
+		</button>
+		<button class="card swatch hoverable" data-copy="var(--secondary)  /* #DCA3B9 */">
+			<div class="chip" style="background:#DCA3B9"></div>
+			<span class="name">Dog Rose</span><span class="hex">#DCA3B9 · --secondary</span>
+			<span class="role">Botón secundario, fondos suaves de etiquetas, estados vacíos e ilustraciones. Pareja natural del CTA.</span>
+			<span class="tag">Acción secundaria</span>
+		</button>
+		<button class="card swatch hoverable" data-copy="var(--delight)  /* #C45524 */">
+			<div class="chip" style="background:#C45524"></div>
+			<span class="name">Copper Beech</span><span class="hex">#C45524 · --delight</span>
+			<span class="role">Personalidad cálida: progreso, favoritos, logros y momentos de celebración. No es botón.</span>
+			<span class="tag">Delight</span>
+		</button>
+		<button class="card swatch hoverable" data-copy="var(--warm)  /* #ED9F77 */">
+			<div class="chip" style="background:#ED9F77"></div>
+			<span class="name">Wild Honeysuckle</span><span class="hex">#ED9F77 · --warm</span>
+			<span class="role">Indicador activo del menú, acentos sobre fondos oscuros y degradados cálidos.</span>
+			<span class="tag">Acento cálido</span>
+		</button>
+		<button class="card swatch hoverable" data-copy="var(--success)  /* #40654A */">
+			<div class="chip" style="background:#40654A"></div>
+			<span class="name">Ivy Bloom</span><span class="hex">#40654A · --success / --link</span>
+			<span class="role">Éxito, confirmaciones y enlaces de texto. Contraste alto sobre blanco.</span>
+			<span class="tag">Éxito</span>
+		</button>
+		<button class="card swatch hoverable" data-copy="var(--warning)  /* #E4C259 */">
+			<div class="chip" style="background:#E4C259"></div>
+			<span class="name">Cowslip Meadow</span><span class="hex">#E4C259 · --warning</span>
+			<span class="role">Advertencias y avisos. Texto siempre en Blackthorn o en versión oscura.</span>
+			<span class="tag">Aviso</span>
+		</button>
+		<button class="card swatch hoverable" data-copy="var(--danger)  /* #E65855 */">
+			<div class="chip" style="background:#E65855"></div>
+			<span class="name">Rowan Berry</span><span class="hex">#E65855 · --danger</span>
+			<span class="role">Errores y acciones destructivas. Como texto usa <code>--danger-text</code> (#C23B38).</span>
+			<span class="tag">Error</span>
+		</button>
+		<button class="card swatch hoverable" data-copy="var(--highlight)  /* #C4A524 */">
+			<div class="chip" style="background:#C4A524"></div>
+			<span class="name">Gorse Bloom</span><span class="hex">#C4A524 · --highlight</span>
+			<span class="role">Destacados: etiqueta «Nuevo», estrellas, logros, insignias. Texto encima en Blackthorn.</span>
+			<span class="tag">Destacado</span>
+		</button>
+	</div>
+
+	<div class="card" style="display:grid;gap:var(--space-3)">
+		<h3>Proporción recomendada 60 · 30 · 10</h3>
+		<div class="ratio-bar">
+			<div style="flex:60;background:var(--hawthorn-blossom);color:var(--text)">60% Neutros (Hawthorn + blanco)</div>
+			<div style="flex:30;background:var(--blackthorn-berry);color:#fff">30% Estructura</div>
+			<div style="flex:10;background:var(--cta);color:#fff">10%</div>
+		</div>
+		<p style="font-size:var(--fs-sm);color:var(--text-muted)">El 10% de acentos se reparte: Foxglove para la acción principal y el resto (Dog Rose, Copper, Honeysuckle, Gorse, estados) solo donde aportan significado.</p>
+	</div>
+</section>
+
+<!-- ============ REGLAS ============ -->
+<section id="reglas">
+	<div class="section-head"><h2>2. Reglas de uso del color</h2><p>Para mantener la interfaz clara aunque la paleta sea rica.</p></div>
+	<div class="dodont">
+		<div class="card">
+			<h3>✔ Sí</h3>
+			<ul>
+				<li>Un único botón Foxglove (CTA) visible por pantalla.</li>
+				<li>Texto en Blackthorn sobre Hawthorn, blanco o colores claros.</li>
+				<li>Color = significado: verde confirma, amarillo avisa, rojo alerta.</li>
+				<li>Usar Copper, Gorse y Honeysuckle con moderación, como «chispa».</li>
+				<li>Acompañar el color con icono o texto (no depender solo del color).</li>
+			</ul>
+		</div>
+		<div class="card dont">
+			<h3>✘ No</h3>
+			<ul>
+				<li>Texto blanco sobre Cowslip, Honeysuckle o Dog Rose (usa Blackthorn).</li>
+				<li>Texto Willow, Gorse o Rowan (claro) sobre blanco: no llega a contraste.</li>
+				<li>Mezclar más de 3 acentos en el mismo componente.</li>
+				<li>Dos CTA Foxglove compitiendo en la misma vista.</li>
+				<li>Fondos de página en colores de acento.</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- ============ ACCESIBILIDAD ============ -->
+<section id="accesibilidad">
+	<div class="section-head"><h2>3. Combinaciones y contraste (WCAG)</h2><p>Mínimo 4,5:1 para texto normal y 3:1 para texto grande (≥ 18,7 px en negrita) y componentes.</p></div>
+	<div class="table-wrap">
+		<table class="data">
+			<thead><tr><th>Texto</th><th>Fondo</th><th>Ratio</th><th>Uso</th></tr></thead>
+			<tbody>
+				<tr><td style="color:#224653">Blackthorn</td><td>Hawthorn</td><td>9,55</td><td><span class="pass">AAA</span> · texto base</td></tr>
+				<tr><td style="color:#224653">Blackthorn</td><td>Silver Birch</td><td>7,31</td><td><span class="pass">AAA</span></td></tr>
+				<tr><td style="background:#224653;color:#fff">Blanco</td><td>Blackthorn</td><td>10,15</td><td><span class="pass">AAA</span> · sidebar, cabeceras</td></tr>
+				<tr><td style="background:#40654A;color:#fff">Blanco</td><td>Ivy Bloom</td><td>6,61</td><td><span class="pass">AA</span> · éxito, enlaces</td></tr>
+				<tr><td style="background:#C73871;color:#fff">Blanco</td><td>Foxglove (relleno CTA)</td><td>4,96</td><td><span class="pass">AA</span> · botón principal (hover Foxglove Deep: 6,67)</td></tr>
+				<tr><td style="background:#D2437A;color:#fff">Blanco</td><td>Foxglove Bell original</td><td>4,35</td><td><span class="fail">Solo texto grande</span> · para texto usa el relleno #C73871</td></tr>
+				<tr><td style="background:#C45524;color:#fff">Blanco</td><td>Copper Beech</td><td>4,49</td><td><span class="pass">AA texto grande</span> · iconos y gráficos, no botones</td></tr>
+				<tr><td style="background:#E4C259">Blackthorn</td><td>Cowslip</td><td>5,88</td><td><span class="pass">AA</span> · avisos</td></tr>
+				<tr><td style="background:#ED9F77">Blackthorn</td><td>Honeysuckle</td><td>4,75</td><td><span class="pass">AA</span></td></tr>
+				<tr><td style="background:#DCA3B9">Blackthorn</td><td>Dog Rose</td><td>4,82</td><td><span class="pass">AA</span> · botón secundario</td></tr>
+				<tr><td style="background:#C4A524">Blackthorn</td><td>Gorse Bloom</td><td>4,23</td><td><span class="pass">AA texto grande</span> · etiquetas en negrita</td></tr>
+				<tr><td style="color:#E65855">Rowan Berry</td><td>Blanco</td><td>3,56</td><td><span class="fail">No para texto</span> → usa <code>--danger-text</code></td></tr>
+				<tr><td style="color:#86915D">Willow Leaf</td><td>Blanco</td><td>3,38</td><td><span class="fail">No para texto</span> → solo decorativo</td></tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+<!-- ============ TIPOGRAFÍA ============ -->
+<section id="tipografia">
+	<div class="section-head"><h2>4. Tipografía</h2><p>Display: <b>Instrument Serif Cursiva</b> (solo nombre corporativo, nombres de app y titulares de inicio) · Interfaz: <b>Inter</b> · Código: <b>JetBrains Mono</b>.</p></div>
+	<div class="card" style="display:grid;gap:var(--space-4)">
+		<div class="type-row"><span class="meta">Display · Instrument Serif Cursiva · 56–80px · solo marca y titulares de inicio</span><p class="display" style="font-size:clamp(2.8rem,7vw,4.5rem)">Fabiana Sotillo</p><p class="display" style="font-size:2.25rem;color:var(--cta-hover)">Nombre de la app</p></div>
+		<div class="type-row"><span class="meta">Título 1 · 32px · Bold</span><h1 style="font-size:var(--fs-2xl)">Panel de control</h1></div>
+		<div class="type-row"><span class="meta">Título 2 · 24px · Semibold</span><h2 style="font-size:var(--fs-xl);font-weight:600">Tus proyectos recientes</h2></div>
+		<div class="type-row"><span class="meta">Título 3 · 20px · Semibold</span><h3 style="font-size:var(--fs-lg);font-weight:600">Configuración de cuenta</h3></div>
+		<div class="type-row"><span class="meta">Cuerpo · 16px · Regular · interlineado 1.6</span><p style="max-width:44rem">Texto de lectura continua. Frases cortas, verbos claros y un tono cercano: «Guarda tus cambios» en lugar de «Proceder al almacenamiento».</p></div>
+		<div class="type-row"><span class="meta">Pequeño · 14px / 12px</span><p style="font-size:var(--fs-sm)">Etiquetas, tablas y ayuda contextual.</p><p style="font-size:var(--fs-xs);color:var(--text-muted)">Notas al pie y metadatos.</p></div>
+		<div class="type-row"><span class="meta">Código · JetBrains Mono · 14px</span><code style="background:var(--structure);color:var(--text-inverse);padding:var(--space-3) var(--space-4);border-radius:var(--radius-md);display:block;font-size:var(--fs-sm)">const theme = { cta: 'var(--cta)' };</code></div>
+	</div>
+</section>
+
+<!-- ============ COMPONENTES ============ -->
+<section id="componentes">
+	<div class="section-head"><h2>5. Componentes</h2><p>Botones, etiquetas, avisos y tarjetas ya adaptados a la paleta.</p></div>
+
+	<div class="card" style="display:grid;gap:var(--space-4)">
+		<h3>Botones</h3>
+		<div class="btn-row">
+			<button class="btn btn-cta">Acción principal</button>
+			<button class="btn btn-secondary">Secundaria</button>
+			<button class="btn btn-structure">Estructural</button>
+			<button class="btn btn-ghost">Fantasma</button>
+			<button class="btn btn-danger">Eliminar</button>
+			<button class="btn btn-cta" disabled>Deshabilitado</button>
+		</div>
+		<p style="font-size:var(--fs-xs);color:var(--text-muted)">Jerarquía: Foxglove (1 por pantalla) → Dog Rose → Estructural → Fantasma. Destructivo solo con confirmación.</p>
+	</div>
+
+	<div class="grid c2">
+		<div class="card" style="display:grid;gap:var(--space-4);align-content:start">
+			<h3>Etiquetas (badges)</h3>
+			<div class="btn-row">
+				<span class="badge badge-success">Completado</span>
+				<span class="badge badge-warning">Pendiente</span>
+				<span class="badge badge-danger">Error</span>
+				<span class="badge badge-info">Borrador</span>
+				<span class="badge badge-nature">Activo</span>
+				<span class="badge badge-new">Nuevo</span>
+				<span class="badge badge-delight">♥ Favorito</span>
+			</div>
+			<h3>Progreso</h3>
+			<div class="progress" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+			<p style="font-size:var(--fs-xs);color:var(--text-muted)">68% · degradado Copper → Foxglove: cálido y con sensación de avance.</p>
+		</div>
+		<div class="card" style="display:grid;gap:var(--space-3);align-content:start">
+			<h3>Avisos</h3>
+			<div class="alert alert-success"><span class="ico">✔</span><div><strong>¡Listo! Cambios guardados</strong>Todo está actualizado.</div></div>
+			<div class="alert alert-warning"><span class="ico">!</span><div><strong>Revisa este dato</strong>Falta completar un campo opcional.</div></div>
+			<div class="alert alert-danger"><span class="ico">✕</span><div><strong>No se pudo guardar</strong>Inténtalo de nuevo en unos segundos.</div></div>
+			<div class="alert alert-info"><span class="ico">i</span><div><strong>Consejo</strong>Pulsa «/» para buscar en cualquier momento.</div></div>
+		</div>
+	</div>
+</section>
+
+<!-- ============ FORMULARIOS ============ -->
+<section id="formularios">
+	<div class="section-head"><h2>6. Formularios</h2><p>Foco visible en Foxglove, errores explicados con texto.</p></div>
+	<div class="card" style="max-width:44rem;display:grid;gap:var(--space-4)">
+		<div class="field"><label for="f1">Nombre del proyecto</label><input id="f1" class="input" placeholder="Ej. Mi aplicación"><span class="hint">Podrás cambiarlo más tarde.</span></div>
+		<div class="field"><label for="f2">Tipo de despliegue</label><select id="f2" class="input"><option>GitHub Pages (web estática)</option><option>Servidor propio</option></select></div>
+		<div class="field error"><label for="f3">Correo electrónico</label><input id="f3" class="input" value="nombre@correo" aria-invalid="true"><span class="hint">✕ Falta el dominio. Ejemplo: nombre@correo.com</span></div>
+		<div class="checks">
+			<label><input type="checkbox" checked> Recordarme</label>
+			<label><input type="checkbox"> Recibir novedades</label>
+		</div>
+		<div class="btn-row"><button class="btn btn-cta">Guardar cambios</button><button class="btn btn-ghost">Cancelar</button></div>
+	</div>
+</section>
+
+<!-- ============ PANTALLA ============ -->
+<section id="pantalla">
+	<div class="section-head"><h2>7. Todo junto: pantalla de ejemplo</h2><p>Estructura oscura, contenido claro, un único CTA y acentos con sentido.</p></div>
+	<div class="app-demo">
+		<aside><strong class="display" style="margin-bottom:var(--space-2);font-size:1.6rem">Mi App</strong><span class="on">Panel</span><span>Proyectos</span><span>Equipo</span><span>Ajustes</span></aside>
+		<div class="body">
+			<div class="row"><h3 style="font-size:var(--fs-lg)">Tus proyectos <span class="badge badge-new">Nuevo</span></h3><button class="btn btn-cta">+ Nuevo proyecto</button></div>
+			<div class="grid c2">
+				<div class="card"><h4>Web corporativa</h4><p style="font-size:var(--fs-xs);color:var(--text-muted);margin:4px 0 12px">Actualizado hoy</p><div class="progress"><span></span></div><div style="margin-top:12px"><span class="badge badge-success">En curso</span></div></div>
+				<div class="card"><h4>App de tareas <span style="color:var(--delight)">♥</span></h4><p style="font-size:var(--fs-xs);color:var(--text-muted);margin:4px 0 12px">Hace 3 días</p><div class="alert alert-warning" style="padding:8px 12px;font-size:var(--fs-xs)"><div><strong>Revisión pendiente</strong></div></div></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ============ TOKENS ============ -->
+<section id="tokens">
+	<div class="section-head"><h2>8. Tokens CSS</h2><p>Archivo completo en <code>css/tokens.css</code>. Cópialo en cada proyecto nuevo.</p></div>
+	<div class="code">
+		<header><span>tokens.css (extracto)</span><button id="copy-css">Copiar</button></header>
+<pre id="css-code">:root {
+	/* Estructura */
+	--bg: #F9F8F4;
+	--surface: #FFFFFF;
+	--border: #D5DCDF;
+	--text: #224653;
+	--structure: #224653;
+	--nature: #86915D;
+
+	/* Acciones */
+	--cta: #C73871;      /* Foxglove Bell (relleno) */
+	--cta-hover: #A82A5C;
+	--secondary: #DCA3B9; /* Dog Rose */
+	--link: #40654A;
+
+	/* Estados */
+	--success: #40654A;
+	--warning: #E4C259;
+	--danger: #E65855;
+	--danger-text: #C23B38;
+
+	/* Personalidad */
+	--highlight: #C4A524;
+	--delight: #C45524;  /* Copper Beech */
+	--warm: #ED9F77;     /* Wild Honeysuckle */
+
+	--font-display: 'Instrument Serif', serif; /* solo marca y titulares */
+	--font-sans: 'Inter', system-ui, sans-serif;
+	--radius-md: 0.75rem;
+	--radius-lg: 1rem;
+}</pre>
+	</div>
+</section>
+
+<footer>
+	<p>© Fabiana Sotillo · Manual de Identidad e Interfaz · v0.2</p>
+	<a href="#inicio">Volver arriba ↑</a>
+</footer>
+</main>
+
+<div class="toast" id="toast" role="status"><i></i><span>Copiado</span></div>
+<script src="js/manual.js"></script>
+</body>
+</html>
